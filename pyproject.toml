@@ -1,0 +1,17 @@
+[tool.black]
+line-length = 88
+target-version = ['py314']
+
+[tool.isort]
+profile = 'black'
+skip = ['.venv']
+
+[tool.mypy]
+python_version = '3.14'
+strict = true
+files = ['main.py', 'models.py', 'repositories.py', 'schemas.py', 'test_api.py']
+
+[tool.pytest.ini_options]
+testpaths = ['.']
+python_files = ['test_*.py']
+addopts = '-ra'
